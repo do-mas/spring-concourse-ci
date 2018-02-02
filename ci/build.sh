@@ -6,7 +6,7 @@ ls -la
 
 export TERM=${TERM:-dumb}
 
-cd spring-concourse-ci
+cd source
 
 ./gradlew --no-daemon build
 
