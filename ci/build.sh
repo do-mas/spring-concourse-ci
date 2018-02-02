@@ -10,4 +10,4 @@ cd spring-concourse-ci
 
 ./gradlew --no-daemon build
 
-cp . ../build-out
+cp -r . ../build-out
