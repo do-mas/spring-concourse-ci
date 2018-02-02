@@ -1,5 +1,5 @@
 resources:
-- name: spring-concource-ci
+- name: spring-concourse-ci
   type: git
   source:
     uri: https://github.com/do-mas/spring-concourse-ci
@@ -18,11 +18,11 @@ jobs:
 
 - name: test-app
   plan:
-  - get: spring-concource-ci
+  - get: spring-concourse-ci
     trigger: true
   - task: tests
-    file: spring-concource-ci/ci/build.yml
+    file: spring-concourse-ci/ci/build.yml
   - put: staging-app
     params:
-      manifest: spring-concource-ci/manifest.yml
+      manifest: spring-concourse-ci/manifest.yml
 
