@@ -1,0 +1,28 @@
+resources:
+- name: spring-concource-ci
+  type: git
+  source:
+    uri: https://github.com/do-mas/spring-concource-ci
+    branch: master
+
+- name: staging-app
+  type: cf
+  source:
+    api: https://api.run.pivotal.io
+    username: domas.juodele@gmail.com
+    password: Pivotal$1
+    organization: doju-pro
+    space: development
+
+jobs:
+
+- name: test-app
+  plan:
+  - get: spring-concource-ci
+    trigger: true
+  - task: tests
+    file: spring-concource-ci/ci/build.yml
+  - put: staging-app
+    params:
+      manifest: spring-concource-ci/manifest.yml
+
