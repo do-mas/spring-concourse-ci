@@ -11,4 +11,4 @@ outputs:
 - name: build-out
 
 run:
-  path: spring-concourse-ci/ci/build.sh
+  path: source/ci/build.sh
