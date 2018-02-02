@@ -25,8 +25,9 @@ jobs:
 
 - name: deploy2
   plan:
-  - get: source
-    trigger: true
+  - aggregate:
+            - get: deploy
+              passed: [deploy]
   - task: build
     file: source/ci/level2/build.yml
   - put: cloud
