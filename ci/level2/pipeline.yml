@@ -26,3 +26,13 @@ jobs:
     params:
       manifest: build-out/manifest.yml
 
+- name: deploy2
+  plan:
+  - get: source
+    trigger: true
+  - task: build
+    file: source/ci/level2/build.yml
+  - put: cloud
+    params:
+      manifest: build-out/manifest.yml
+
