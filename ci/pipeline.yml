@@ -2,7 +2,7 @@ resources:
 - name: spring-concource-ci
   type: git
   source:
-    uri: https://github.com/do-mas/spring-concource-ci
+    uri: https://github.com/do-mas/spring-concourse-ci
     branch: master
 
 - name: staging-app
