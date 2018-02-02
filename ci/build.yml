@@ -10,6 +10,5 @@ inputs:
 outputs:
 - name: build-out
 
-
 run:
   path: spring-concourse-ci/ci/build.sh

@@ -1,5 +1,5 @@
 resources:
-- name: spring-concourse-ci
+- name: source
   type: git
   source:
     uri: https://github.com/do-mas/spring-concourse-ci
@@ -18,7 +18,7 @@ jobs:
 
 - name: test-app
   plan:
-  - get: spring-concourse-ci
+  - get: source
     trigger: true
   - task: tests
     file: spring-concourse-ci/ci/build.yml
