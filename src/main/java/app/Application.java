@@ -18,7 +18,7 @@ public class Application {
 
     @RequestMapping()
     public String getData() {
-        return " thing works!";
+        return "This thing works!";
     }
 
 }
