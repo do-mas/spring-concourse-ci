@@ -1,6 +1,6 @@
 ---
 applications:
-- name: spring-app
+- name: spring-app-2
   memory: 1GB
   instances: 1
   path: build/libs/spring-concourse-ci-0.1.0.jar
