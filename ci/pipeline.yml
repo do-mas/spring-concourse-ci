@@ -21,7 +21,7 @@ jobs:
   - get: source
     trigger: true
   - task: tests
-    file: spring-concourse-ci/ci/build.yml
+    file: source/ci/build.yml
   - put: staging-app
     params:
       manifest: build-out/manifest.yml
