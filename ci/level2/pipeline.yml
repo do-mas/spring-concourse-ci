@@ -1,0 +1,28 @@
+resources:
+- name: source
+  type: git
+  source:
+    uri: https://github.com/do-mas/spring-concourse-ci
+    branch: level2
+
+- name: cloud
+  type: cf
+  source:
+    api: https://api.run.pivotal.io
+    username: domas.juodele@gmail.com
+    password: Pivotal$1
+    organization: doju-pro
+    space: development
+
+jobs:
+
+- name: deploy
+  plan:
+  - get: source
+    trigger: true
+  - task: build
+    file: source/ci/level2/build.yml
+  - put: cloud
+    params:
+      manifest: build-out/manifest.yml
+
