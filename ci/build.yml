@@ -7,5 +7,9 @@ image_resource:
 inputs:
 - name: spring-concourse-ci
 
+outputs:
+- name: build-out
+
+
 run:
   path: spring-concourse-ci/ci/build.sh
