@@ -10,7 +10,7 @@ resources:
   source:
     api: https://api.run.pivotal.io
     username: domas.juodele@gmail.com
-    password: Pivotal$1
+    password: {{password}}
     organization: doju-pro
     space: development
 
